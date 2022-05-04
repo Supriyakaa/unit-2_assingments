@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+         grid-template-rows: 50px 100px 100px 100px;  
+         grid-template-areas: 
+         "nav nav"
+         " l r1"
+         "l r2"
+         "l r3"; 
+         gap:20px;
+         font-size: 40px;
+            color: bisque;
+        }
+        #box > div{
+            justify-content: center;
+            text-align: center;
+            display: flex;
+        }
+        #box > div:nth-child(1){
+            grid-area:nav ;
+            background-color: yellow ;
+        }
+        #box > div:nth-child(2){
+            grid-area:l ;
+            background-color:red ;
+        }
+        #box > div:nth-child(3){
+            grid-area:r1 ;
+            background-color:green ;
+        }
+        #box > div:nth-child(4){
+            grid-area: r2;
+            background-color: green ;
+        }
+        #box > div:nth-child(5){
+            grid-area:r3 ;
+            background-color: green ;
+        }
+        @media all and (min-width:450px) and (max-width:750px){
+            #box{
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+         grid-template-rows: 50px 200px 100px ;  
+         grid-template-areas: 
+         "nav nav nav"
+         " l l l"
+         "r1 r2 r3"; 
+         gap:10px;
+        }
+    }
+        @media all and (min-width:50px) and (max-width:449px){
+            #box{
+            display:grid;
+            grid-template-columns: repeat(1,1fr);
+         grid-template-rows: 30px 80px 80px 80px 80px ;  
+         grid-template-areas: 
+         "nav"
+         " l "
+         "r1 "
+         "r2"
+         "r3"; 
+         gap:10px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div>navigation</div>
+        <div>left box</div>
+        <div>rigth box</div>
+        <div>rigth box</div>
+        <div>rigth box</div>
+    </div>
+    
+</body>
+</html>

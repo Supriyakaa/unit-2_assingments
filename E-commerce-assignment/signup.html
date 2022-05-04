@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Open+Sans&family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+    <style>  #navbar {
+        display: flex;
+        justify-content: space-around;
+        background-color: burlywood;
+        padding: 10px;
+      }
+      #button{
+        background-color:  burlywood;
+        border-radius: 5px;
+        
+      }
+      @media all and (min-width: 80px) and (max-width: 400px) {
+        #container {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+     
+      #navbar a:hover {
+        color: white;
+      }
+      #navbar a {
+        cursor: pointer;
+      }
+      h1{
+        font-weight: bold;
+        font-style: inherit;
+        color: maroon
+      }
+        #container{
+            margin:auto ;
+            border-radius:10px ;
+            height: 400px;
+            width:400px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            padding: 20px;
+            
+            
+        }
+        label{
+            margin: auto;
+            line-height: 10px;
+            font-size:small;
+            font-family: 'DM Sans', sans-serif;
+            font-family: 'Open Sans', sans-serif;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bolder;
+
+        }
+        #username{
+            margin:auto;
+           height: 20px;
+           background-color:#caf0fe;
+           width: 200px;
+           border-radius: 4px;
+        }
+        #email{
+            margin:auto;
+           height: 20px;
+           background-color:#caf0fe;
+           width: 200px;
+           border-radius: 4px;
+        }
+        #password{
+           margin:auto;
+            height: 20px;
+            background-color: #caf0fe;
+            width:200px;
+            border-radius: 4px;
+        }
+        h2{
+            text-align: center;
+           font-weight: bolder;
+           color: black;
+           font-size:x-large;
+        }
+        #btn{
+            background-color: rgb(154, 154, 163);
+            color: black;
+            margin-top: 20px;
+            margin-left:100px;
+            border-radius: 3px;
+            width: 200px;
+            height: 30px;
+           font-weight: bold;
+
+        }
+        
+    </style>
+
+</head>
+<body><div id="navbar">
+    <div><a target="_blank" href="men.html">Men</a></div>
+    <div><a href="women.html">Women</a></div>
+    <div><a href="signup.html">Signup</a></div>
+    <div><a href="login.html">Login</a></div>
+    <div><a href="Checkout.html">checkout</a></div>
+    <button id="button"><a href="cart.html">My Cart</a></button>
+   
+  </div>
+    <div id="container">
+        <h1>Create Account</h1>
+        <h2>Sign-Up</h2>
+        <form>
+            <label>Username</label>
+            <br/>
+            <input id="username" type="text" placeholder="Enter the username"/>
+            <br/>
+            <label>Email</label>
+            <br/>
+            <input id="email" type="email" placeholder="Enter the Email"/>
+            <br/>
+            <label>Password</label>
+            <br/>
+
+            <input id="password" type="password" placeholder="Enter the password"/>
+            <br/>
+            <input id="btn" type="submit" value="sign-up"/>
+        <br>
+        </form>
+        
+    </div>
+</body>
+</html>
+<script>
+
+    document.querySelector("form").addEventListener("submit",signin)
+ 
+    function signin()
+    { 
+        var userarr=JSON.parse(localStorage.getItem("usercred"))||[];
+        event.preventDefault();
+        userobj={
+            username:document.querySelector("#username").value,
+            email:document.querySelector("#email").value,
+            password:document.querySelector("#password").value
+
+        };
+        userarr.push(userobj);
+      localStorage.setItem("usercred",JSON.stringify(userarr))
+      window.location.href="login.html";
+        
+
+    }
+</script>
+
+
+

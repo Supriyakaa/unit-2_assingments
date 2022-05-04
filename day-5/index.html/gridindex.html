@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We</title>
+    <style>
+
+#container{
+   width:50%;
+   height: 100px;
+   /* border:1px solid red; */
+   margin:auto;
+   text-align: center;
+   padding: auto;
+}
+#container > h1{
+font-size:50px;
+
+}
+#container > p{
+margin-top:-20px;
+font-size:22px;
+color:gray;
+}
+.card{
+ width:70%;
+ height:300px;
+ margin:auto;
+ margin-top:80px;
+ border-radius: 10px;
+ /* border:1px solid black; */
+ display: grid;
+ grid-template-columns: repeat(3,1fr);
+ grid-template-rows:auto;
+ gap:30px;
+ 
+}
+.card > div{
+width:30%;
+height: 100%;
+/* border:1px solid teal; */
+margin:auto;
+text-align: center;
+border-radius: 15px;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.card > div > p{
+    padding:0px 15px 0px 15px;
+}
+ .card > div:nth-child(1) > h1{
+     color: green;
+ }
+ .card > div:nth-child(2) > h1{
+     color: orangered;
+ }
+ .card > div:nth-child(3) > h1{
+     color: blue;
+ }
+button{
+    background-color: white;
+    border:3px solid rgba(30, 127, 187, 0.709);
+    color:rgba(30, 127, 187, 0.709) ;
+    border-radius: 5px;
+    padding: 20px 35px 20px 35px;
+    margin-top:50px;
+    font-weight: bold;
+}
+button:hover{
+    background-color: blue;
+    color: white;
+    border:0px;
+    font-weight: bold;
+}
+.card > div > p + p{
+    color: grey;
+    font-size: 20px;
+    margin:auto;
+    padding:auto;
+    padding:0px 15px 0px 15px;
+}
+h3{
+    font-size: 30px;
+}
+h1{
+    font-size: 35px;
+}
+.card > div > h2 + p{
+    font-style: italic;
+    margin-top: -15px;
+
+}
+@media all and (min-width:451px) and (max-width:750px){
+  
+    .card{
+ width:auto;
+
+ margin:auto;
+ margin-top:80px;
+ border-radius: 10px;
+ /* border:1px solid black; */
+ display: grid;
+ grid-template-columns: repeat(2,1fr);
+ grid-template-rows:auto;
+ gap:30px;
+ 
+}
+@media all and (min-width:51px) and (max-width:450px){
+  
+  .card{
+width:auto;
+
+margin:auto;
+margin-top:80px;
+border-radius: 10px;
+/* border:1px solid black; */
+display: grid;
+grid-template-columns: repeat(1,1fr);
+grid-template-rows:auto;
+gap:30px;
+
+}
+}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Choose a plan that right for yur business</h1>
+<p>we  clloct review from our user so tou cabn get bthe idea about the thisnd that you dont knsiw and nwe rhaing wivhiv is the part od the new thisns</p>
+    </div>
+    <div class="card">
+
+<div>
+    <h3>Starter Plan</h3>
+    <h1>Free</h1>
+    <p>per month</p>
+    <P>we collect revieew from our userso you can get an honest opinien of what an experiece with our website.</p>
+        <button>Start now</button>
+</div>
+<div>
+    <h3>Starter Plan</h3>
+    <h1>$39.45</h1>
+    <p>per month</p>
+    <P>we collect revieew from our userso you can get an honest opinien of what an experiece with our website.</p>
+        <button>Start now</button>   
+</div>
+<div>
+    <h3>Starter Plan</h3>
+    <h1>$59.56</h1>
+    <p>per month</p>
+    <P>we collect revieew from our userso you can get an honest opinien of what an experiece with our website.</p>
+        <button>Start now</button>
+</div>
+
+    </div>
+
+</body>
+</html>

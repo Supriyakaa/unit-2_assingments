@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title><style>
+           #navbar {
+        display: flex;
+        justify-content: space-around;
+        background-color:orange;
+        padding: 10px;
+      }
+      #button{
+        background-color: orange; 
+        border-radius: 5px;
+        
+      }
+
+      a {
+        text-decoration: none;
+      }
+      #navbar a:hover {
+        color: white;
+      }
+      #navbar a {
+        cursor: pointer;
+      } 
+      
+      @media all and (min-width: 80px) and (max-width: 400px) {
+        #container {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+      #button{
+        background-color: orange;
+        border-radius: 5px;
+        
+      }
+      p{
+          font-size: large;
+          font-weight: bold;
+          color: black;
+      }
+    </style>
+  </head>
+  <body>  <div> <div id="navbar">
+    <div><a target="_blank" href="men.html">Men</a></div>
+    <div><a href="women.html">Women</a></div>
+    <div><a href="signup.html">Signup</a></div>
+    <div><a href="login.html">Login</a></div>
+    <button><a href="checkout.html" target="blank">Checkout</a></button>
+  
+   </div>
+   <p></p>
+    
+    <div id="container">  
+   <input id="Promo" type="text" placeholder="Enter Promo Code" />
+    </div>
+  </body>
+</html>
+
+<script>
+  var cartData = JSON.parse(localStorage.getItem("cart"));
+  console.log(cartData);
+
+  var total = cartData.reduce(function (sum, elem, index, arr) {
+    return sum + Number(elem.price);
+  }, 0);
+
+  var length = cartData.length;
+  console.log(length);
+
+  console.log(total);
+  // total is Rs 16365
+  //`` - template literals
+  document.querySelector(
+    "p"
+  ).innerText = ` YOU HAVE ${length} ITEMS IN CART AND TOTAL IS Rs ${total}`;
+
+  cartData.map(function (elem, index) {
+    var box = document.createElement("div");
+
+    var img = document.createElement("img");
+    img.src = elem.image_url;
+
+    var name = document.createElement("p");
+    name.textContent = elem.name;
+
+    var price = document.createElement("p");
+    price.innerText = elem.price;
+
+    var btn = document.createElement("button");
+    btn.innerText = "Remove";
+    btn.addEventListener("click", function () {
+      removeItem(elem, index);
+    });
+
+    box.append(img, name, price, btn);
+
+    document.querySelector("#container").append(box);
+  });
+
+  function removeItem(elem, index) {
+    console.log(elem, index);
+    cartData.splice(index, 1);
+    console.log(cartData);
+    localStorage.setItem("cart", JSON.stringify(cartData));
+    window.location.reload();
+  }
+
+  //    var arr =[1,2,3,4]
+  //    console.log(arr.splice(0,1)) // []
+</script>

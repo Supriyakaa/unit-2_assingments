@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #container{
+         width: 80%;
+        height: 500px; 
+        /* border: 1px solid black; */ 
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows:repeat(2,200px) ;
+        margin: 0 auto;
+        gap:20px;
+    }
+
+    #container>div{
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 20px; 
+        border-radius: 10px;
+
+    }
+#container > div > div{
+    display:flex;
+    justify-content: space-between;
+    font-size: bold;
+}
+
+#container > div > div + P {
+        font-size: 15px;
+        line-height: 25px;
+        color:gray;
+      }
+
+#container > div > div p{
+color: rgb(249, 230, 27);
+font-size: 20px;
+
+}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>
+            
+                <div>
+                  <p>Cappuccino</p>
+                  <p>$49</p>
+                </div>
+                <p>
+                  Usage of the Internet is becoming more common due to rapid advance
+                </p>
+              
+        </div>
+        <div>
+            <div>
+                <p1>Cappuccino</p1>
+                <p>$49</p>
+              </div>
+              <p>
+                Usage of the Internet is becoming more common due to rapid advance
+              </p>
+        </div>
+        <div>
+            <div>
+                <p1>Cappuccino</p1>
+                <p>$49</p>
+              </div>
+              <p>
+                Usage of the Internet is becoming more common due to rapid advance
+              </p>
+        </div>
+        <div>  <div>
+            <p1>Cappuccino</p1>
+            <p>$49</p>
+          </div>
+          <p>
+            Usage of the Internet is becoming more common due to rapid advance
+          </p></div>
+        <div>  <div>
+            <p1>Cappuccino</p1>
+            <p>$49</p>
+          </div>
+          <p>
+            Usage of the Internet is becoming more common due to rapid advance
+          </p></div>
+        <div>
+            <div>
+                <p1>Cappuccino</p1>
+                <p>$49</p>
+              </div>
+              <p>
+                Usage of the Internet is becoming more common due to rapid advance
+              </p>
+        </div>
+    </div>
+    
+</body>
+</html>

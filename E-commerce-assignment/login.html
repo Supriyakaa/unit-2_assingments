@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Open+Sans&family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+    <style>
+        #container{
+            margin:auto ;
+            border-radius:10px ;
+            height: 400px;
+            width:400px;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            padding: 20px;
+            
+            
+        }
+        label{
+            margin: auto;
+            line-height: 10px;
+            
+            font-weight: bolder;
+
+        }
+       
+        #email{
+            margin:auto;
+           height: 20px;
+           width: 200px;
+           border-radius: 4px;
+        }
+        #password{
+           margin:auto;
+            height: 20px;
+            width:200px;
+            border-radius: 4px;
+        }
+        
+        
+        #btn{
+            background-color: rgb(228, 228, 236);
+            color: black;
+            margin-top: 20px;
+            margin-left:100px;
+            border-radius: 3px;
+            width: 200px;
+            height: 30px;
+            font-family: 'DM Sans', sans-serif;
+           font-family: 'Open Sans', sans-serif;
+           font-family: 'Poppins', sans-serif;
+           font-weight: bold;
+
+        }
+           
+      h1{
+        
+        color: brown;
+        font-weight: bold;
+        margin-bottom: 10px;
+        
+      }
+   
+      p{
+        font-size: smaller;
+        font-style: italic;
+        font-weight: bold;
+        
+      }
+      #navbar {
+        display: flex;
+        justify-content: space-around;
+        background-color:orange;
+        padding: 10px;
+      }
+      
+      #navbar a:hover {
+        color: white;
+      }
+      #navbar a {
+        cursor: pointer;
+      } 
+      
+      @media all and (min-width: 80px) and (max-width: 400px) {
+        #container {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+      #button{
+        background-color: orange;
+        border-radius: 5px;
+        
+      }
+
+        
+    </style>
+
+</head>
+<body><div id="navbar">
+    <div><a target="_blank" href="men.html">Men</a></div>
+    <div><a href="women.html">Women</a></div>
+    <div><a href="signup.html">Signup</a></div>
+    <div><a href="login.html">Login</a></div>
+    <div><a href="checkout.html">Checkout</a></div>
+    <button><a href="cart.html">Go to Cart</a></button>
+  </div>
+    <div id="container">
+        <h1>Account login-in</h1>
+        <form>
+           
+            <label>Email</label>
+            <br/>
+            <input id="email" type="email" placeholder="Enter the Email"/>
+            <br/>
+            <label>Password</label>
+            <br/>
+
+            <input id="password" type="password" placeholder="Enter the password"/>
+            <br/>
+            <input id="btn" type="submit" value="login-in"/>
+        <br>
+        </form>
+        
+    </div>
+</body>
+</html>
+<script>
+    var reguser=JSON.parse(localStorage.getItem("usercred"))
+    document.querySelector("form").addEventListener("submit",login)
+    function login()
+    {
+        event.preventDefault();
+        enteredemail=document.querySelector("#email").value;
+        enteredpassword=document.querySelector("#password").value;
+        for(var i=0;i<reguser.length;i++)
+        {
+            if((enteredemail==reguser[i].email)&&(enteredpassword==reguser[i].password))
+            {
+                alert("Logged in successfully")
+                window.location.href="index.html";
+            }
+            else
+            {
+              alert("incorrect password or Email")  
+            }
+        }
+
+    }
+
+
+ 
+</script>
+
+

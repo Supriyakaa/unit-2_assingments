@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naval</title>
+    <style>
+        .pop{
+           width:95%;
+           height: 80px; 
+           display:flex;
+           /* text-align: center; */
+           margin:auto ;
+           /* border:1px solid black; */
+           border:1px solid rgb(246, 216, 205);
+           background-color: rgb(248, 245, 240);
+           border-radius: 10px;
+           justify-content: space-evenly;
+           
+
+        }
+        .kiki{
+     width:50%;
+      height: 90px;
+       display: flex;
+       justify-content: space-evenly;
+       justify-items: right;
+       /* border:1px solid red; */
+       text-decoration: solid;
+       font-weight: 900;
+       padding-top: 20px;
+       display:flex;
+      
+       ;
+        }
+        .koko{
+     width:50%;
+      height: 90px;
+       
+       /* justify-content: space-evenly; */
+       justify-items: left;
+       /* border:1px solid blue; */
+       display:flex;
+       
+       
+        }
+        button{
+            background-color: rgba(181, 168, 168, 0.366);
+            border-radius: 5px;
+            color: rgb(225, 39, 101);
+            border:1px solid rgb(225, 39, 101);
+            height: 50%;
+          /* margin:auto; */
+          /* padding-top: 20px; */
+          /* width: 20px; */
+
+
+        }
+        img{
+            width: 30%;
+            height: 100%;
+            justify-content: left;
+            padding-left: 10px;
+        }
+
+        .ek{
+width:15%;
+height: auto;
+padding: 5px 5px 5px 5px;
+padding-left: 20px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div  class="pop">
+   
+        <div class="koko">
+            <img src="data:image/png;base64,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"/>
+        </div>
+        <div class="kiki">
+            <div class="ek">Courses</div>
+            <div class="ek">Fee & ISA</div>
+            <div class="ek">About Us</div>
+            <div class="ek">HIRE from Us</div>
+            <div class="ek">FAQ</div>
+            <div class="ek">Events</div>
+            <!-- <button>
+                Login
+            </button> -->
+        </div>
+        <button>
+            Login
+        </button>
+    </div>
+    
+
+</body>
+</html>

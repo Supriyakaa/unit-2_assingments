@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #payment{
+            display: block;
+            border:none;
+            color: white;
+            background-color:olivedrab;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            cursor: pointer;
+            height: 30px;
+            width: 100px;
+            
+
+        }
+        #pay{
+            display: block;
+            border:none;
+            color: white;
+            background-color:olivedrab;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            cursor: pointer;
+            height: 30px;
+            width: 100px;
+            
+
+        }
+        a{
+            margin-bottom: 400px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Payment</h1>
+    
+<form>
+    <label>Name:</label>
+
+    <input type="text" id="name" placeholder="enter name"/>
+    <br>
+    <label>card number:</label>
+    <input type="number" id="card" placeholder="enter card number"/>
+    <br>
+    <label>Expiry date:</label>
+    <input type="date" id="expiry" placeholder="enter expiry"/>
+    <br>
+    <label>cvv:</label>
+    <input type="number" id="cvv" placeholder="enter cvv"/>
+    <br>
+    <input type="submit" id="payment" value="submit"/>
+    <br>
+
+  
+  
+</form>
+<a href="paymentproceed.html">proceed to pay</a>
+    
+</body>
+</html>
+<script>
+
+
+
+document.querySelector("form").addEventListener("submit",details)
+    var cardarr=JSON.parse(localStorage.getItem("carddata"))||[]; 
+   
+
+        
+  function details()
+  {
+     
+
+  
+        event.preventDefault()
+        var carddetail={
+            name:document.querySelector("#name").value,
+            cardnumber:document.querySelector("#card").value,
+            expirydate:document.querySelector("#expiry").value,
+            cvv:document.querySelector("#cvv").value
+           
+        
+
+        };
+      
+    
+   cardarr.push(carddetail);
+   localStorage.setItem("carddata",JSON.stringify(cardarr));
+
+   
+   }
+
+   
+    
+   
+</script>

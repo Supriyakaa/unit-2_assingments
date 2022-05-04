@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+  button{  display: block;
+    border:none;
+    color: white;
+    background-color:rgb(98, 205, 224);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    cursor: pointer;
+    height: 30px;
+    width: 100px;
+    margin-top: 10px;
+    
+
+}
+</style>
+<body>
+    <input  id="otp" type="number" placeholder="Enter otp"/>
+    <button id="pay">pay</button>
+
+</body>
+</html>
+<script> 
+  
+    document.querySelector("#pay").addEventListener("click",pay)
+    function pay()
+    {
+        var otp=document.querySelector("#otp").value;
+        if(otp==1234)
+        {
+            alert("order placed successfully");
+        }
+        else{
+            alert("Wrong otp")
+        }
+
+    }
+</script>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #navbar {
+        display: flex;
+        justify-content: space-around;
+        background-color: burlywood;
+        padding: 10px;
+      }
+      #button{
+        background-color:  burlywood;
+        border-radius: 5px;
+        
+      }
+      @media all and (min-width: 80px) and (max-width: 400px) {
+        #container {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+
+      a {
+        text-decoration: none;
+      }
+      #navbar a:hover {
+        color: white;
+      }
+      #navbar a {
+        cursor: pointer;
+      }
+      h1{
+        font-weight: bold;
+        font-style: inherit;
+        color: maroon
+      }
+    </style>
+  </head>
+  <body>
+
+
+
+ <div id="navbar">
+      <div><a target="_blank" href="men.html">Men</a></div>
+      <div><a href="women.html">Women</a></div>
+      <div><a href="signup.html">Signup</a></div>
+      <div><a href="login.html">Login</a></div>
+      <div><a href="Checkout.html">checkout</a></div>
+      <button id="button"><a href="cart.html">My Cart</a></button>
+     
+    </div>
+    <h1>Create Account</h1>
+    <h3>Sign Up  </h3>
+    <form>
+      <input id="email" type="text" placeholder="Enter mail" />
+      <input id="pass" type="password" placeholder="Enter password" />
+      <input id="mob" type="text" placeholder="Mobile number" />
+      <input type="submit" />
+    
+    </form>
+  </body>
+</html>
+<div id="container">
+  <h2>Sign-in</h2>
+  <form>
+      <label>Username</label>
+      <br/>
+      <input id="username" type="text" placeholder="Enter the username"/>
+      <br/>
+      <label>Email</label>
+      <br/>
+      <input id="email" type="email" placeholder="Enter the Email"/>
+      <br/>
+      <label>Password</label>
+      <br/>
+
+      <input id="password" type="password" placeholder="Enter the password"/>
+      <br/>
+      <input id="btn" type="submit" value="sign-up"/>
+  <br>
+  </form>
+  
+</div>
+</body>
+</html>
+<script>
+
+document.querySelector("form").addEventListener("submit",signin)
+
+function signin()
+{ 
+  var userarr=JSON.parse(localStorage.getItem("usercred"))||[];
+  event.preventDefault();
+  userobj={
+      username:document.querySelector("#username").value,
+      email:document.querySelector("#email").value,
+      password:document.querySelector("#password").value
+
+  };
+  userarr.push(userobj);
+localStorage.setItem("usercred",JSON.stringify(userarr))
+window.location.href="login.html";
+  
+
+}
+</script>
+
+

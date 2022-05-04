@@ -1,0 +1,94 @@
+[10:15 pm, 02/05/2022] Vikram Madhubani Masai: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masai investors</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="navbar">
+        <div><a href="backend.html">Backend</a></div>
+        <div><a href="frontend.html">Frontend</a></div>
+    </div>
+    <form id="investorform">
+        <input type="text" id="name" placeholder="Enter name">
+        <input type="text" id="imgurl" placeholder="Enter Image Url">
+        <input type="text" id="role" placeholder="Enter Investor Role">
+        <input type="text" id="logo" placeholder="Enter Investor Company Logo">
+        <input type="submit">
+    </form>
+
+    
+</body>
+</html>
+<script>
+    document.querySelector("#investorform").addEventListener("submit",investorFun)
+
+    var investorsArr=JSON.parse(localStorage.getItem("investorsData")) || []
+
+    function investorFun(){
+        event.preventDefault();
+
+        var investorobj={
+            investorImg:investorform.imgurl.value,
+            investorName:investorform.name.value,
+            investorRole:investorform.role.value,
+            investorLogo:investorform.logo.value,
+        };
+
+        investorsArr.push(investorobj);
+        console.log(investorsArr)
+        localStorage.setItem("investorsData",JSON.stringify(investorsArr))
+    }
+</script>
+[10:16 pm, 02/05/2022] Vikram Madhubani Masai: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+     
+
+    </style> 
+</head>
+<body>
+    <h1>Masai Investors</h1>
+    <div id="container"></div>
+    
+</body>
+</html>
+<script>
+    var investorsArr=JSON.parse(localStorage.getItem("investorsData"));
+
+
+    investorsArr.forEach(function(elem){
+
+        var box=document.createElement("div");
+        // box.setAttribute("id",box)
+        
+
+        var avatar=document.createElement("img")
+        avatar.setAttribute("src",elem.investorImg);
+        
+
+        var name=document.createEl Madhubani Masai: #container{
+    
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(1,auto);
+    gap:20px;
+    margin:auto;
+}
+div>img{
+width:100%;
+height:100%;
+border-radius: 20px 20px 0px 0px ;
+}
+p+img{
+height:50px;
+width:50%

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #payment{
+            display: block;
+            border:none;
+            color: white;
+            background-color:olivedrab;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            cursor: pointer;
+            height: 30px;
+            width: 100px;
+            
+
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+       
+        <label>card number:</label>
+        <input type="number" id="card" placeholder="enter card number"/>
+        <br>
+        <label>Expiry date:</label>
+        <input type="date" id="expiry" placeholder="enter expiry"/>
+        <br>
+        <label>cvv:</label>
+        <input type="number" id="cvv" placeholder="enter cvv"/>
+        <br>
+        <input type="submit" id="payment" value="pay"/>
+        <br>
+    
+      
+      
+    </form>
+    
+</body>
+</html>
+<script>
+      var cardarr=JSON.parse(localStorage.getItem("carddata"))||[]
+     
+  
+   document.querySelector("form").addEventListener("submit",pay)
+   function pay()
+   {
+       console.log("inside")
+  event.preventDefault()
+  cardnumberentered=document.querySelector("#card").value;
+       expirydateenter=document.querySelector("#expiry").value;
+     cvventered=document.querySelector("#cvv").value
+    
+    for(i=0;i<cardarr.length;i++)
+   {
+       if((cardnumberentered==cardarr[i].cardnumber)&&(expirydateenter== cardarr[i].expirydate)&&(  cvventered==cardarr[i].cvv)){
+
+
+         window.location.href="otp.html";
+       }
+       else
+       {
+           alert("Error");
+       }
+   }
+   
+       
+   }
+ 
+  
+
+</script>
