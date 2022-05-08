@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Open+Sans&family=Poppins:wght@200;300&display=swap" rel="stylesheet">
     <style> 
@@ -28,14 +30,15 @@
         #container{
             margin:auto ;
             /* border:1px solid gray; */
-            height: 700px;
-            width:40%;
+            height: 400px;
+            width:25%;
             box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
             padding: 30px;
-            
-            text-align: center;
-            
-        }
+            line-height: 30px;
+            text-align: 20px;
+            gap:30px;
+              }
+
         label{
             margin: auto;
             line-height: 50px;
@@ -52,7 +55,7 @@
            height: 50px;
            background-color:#f6fafc;
            width: 400px;
-           curso
+           cursor:pointer;
           
         }
         #email{
@@ -62,7 +65,7 @@
            width: 400px;
            color: gray;
         }
-        #password{
+        #pass{
            margin:auto;
             height: 50px; 
             background-color: #ffffff;
@@ -91,7 +94,7 @@
             width: 200px;
             height: 30px;
            font-weight: bold;
-           padding: 20px 30px 30px 30px;
+           padding: 20px 30px 40px 30px;
            margin:auto;
            margin-top:30px;
            border:0px;
@@ -99,67 +102,60 @@
         }
     
     </style>
-
-</head>
-<body><div id="navbar">
+    </style>
+  </head>
+  <body><div id="navbar">
     
     <div><a href="index.html">main</a></div>
     <div><a href="login.html">Login</a></div>
     <div><a href="navel.html">signup</a></div>
-    <!-- <button id="button"><a href="cart.html">My Cart</a></button> -->
-   
+
   </div>
-    <div id="container">
-        <h1>Sign In To India Today</h1>
-        <h2> Don't have an account? </h2>
-        <h2>Sign-Up Now>></h2>
-        <h3>
-            ________________Sign In Via________________</h3>
-            <div id="logo">
-
-            </div>
-            <h3>
-                _________Or Sign In Using Email or Mobile no.___________</h3>
-        <form>
-            <label>Username</label>
+  <div id="container">
+    <h1>Login To Account </h1>
+    <form>
+        <label>Enter Email/Mobile</label>
             <br/>
-            <input id="username" type="text" placeholder="Enter the username"/>
-            <br/>
-            <label>Email</label>
-            <br/>
-            <input id="email" type="email" placeholder="Enter the Email/Mobile"/>
-            <br/>
-            <label>Password</label>
-            <br/>
-
-            <input id="password" type="password" placeholder="Enter the password"/>
-            <br/>
-            <input id="btn" type="submit" value="sign-up"/>
-            <!-- <input id="btn" type="submit" value="sign-up"/> -->
-        <br>
-        </form>
-    
-    </div>
-</body>
-</html>
-<script> 
-
-    document.querySelector("form").addEventListener("submit",signin)
- 
-    function signin()
-    { 
-        var userarr=JSON.parse(localStorage.getItem("usercred"))||[];
-        event.preventDefault();
-        userobj={
-            username:document.querySelector("#username").value,
-            email:document.querySelector("#email").value,
-            password:document.querySelector("#password").value
-
-        };
-        userarr.push(userobj);
-      localStorage.setItem("usercred",JSON.stringify(userarr))
-      window.location.href="login.html";
+     
         
+            <input id="email" type="text" placeholder="Enter email/mobile" />
+            <label>Type Passcode</label>
+            <br/>
+      <input id="pass" type="password" placeholder="Enter password" />
+      
+      <input id="btn" type="submit" value="Login-in"/>
+    </div>
+      <!-- <input type="submit" /> -->
+    </form>
+</body>
 
+</html>
+
+<script>
+  document.querySelector("form").addEventListener("submit", loginFun);
+  var regdUsers = JSON.parse(localStorage.getItem("userCreds"));
+  //console.log(regdUsers);
+
+  function loginFun() {
+    event.preventDefault();
+    var enteredEmail = document.querySelector("#email").value;
+    var enteredPass = document.querySelector("#pass").value;
+    //console.log(email, pass);
+
+    for (var i = 0; i < regdUsers.length; i++) {
+      console.log(regdUsers[i]);
+
+      if (
+        regdUsers[i].email == enteredEmail &&
+        regdUsers[i].password == enteredPass
+      ) {
+        alert("login success");
+        window.location.href = "men.html";
+        break;
+      } else {
+        console.log("login failed");
+      }
     }
+  }
 </script>
+   

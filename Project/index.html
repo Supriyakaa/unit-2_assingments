@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <title>Document</title>
+    <!-- <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> -->
+
+    <!-- <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
+
+    <!-- <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
+    <style>
+        #row1{
+            color: gray;
+            
+            font-size: 15px;
+            display:flex;
+            justify-content: space-between;
+        justify-items: left;
+            /* /* text-align: center; * */
+            padding-left:40px;
+            padding-right: 400px;
+            height: 30px;
+            padding-bottom: 10px;
+        
+         
+          border:3px dotted gray;
+        }
+        #row1 > p:nth-child(1){
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: -10px 0px 0px -10px;
+
+        }
+        #row1 > p{
+    font-size: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+
+        }
+        
+
+        
+        #row2{
+            justify-items: center;
+            justify-content:space-between;
+            width:70%;
+            /* height:px; */
+            display:flex;
+            text-align:center;
+            padding: 0px 50px 0px 50px;
+            margin:auto;
+        margin-top: -10px;
+       
+        }
+        
+        #row2 > p{
+            text-align: center;
+        font-size: 30px;
+        padding-top: 20px;
+        color: black;
+     font-family: 'Open Sans';font-size: 35px;
+       
+        }
+        #row3{
+            background-color:rgb(158, 32, 32);
+            text-align: center;
+           display:flex;
+            width:100%;
+            height: 45px;
+            border:1px solid blue;
+            margin:auto;
+            padding-left: 80px;
+          
+        }
+        
+        button{
+            background-color:rgb(158, 32, 32) ;
+            text-decoration: bold;
+            padding:8px 25px 8px 10px;
+            color:rgb(222, 217, 217);
+                font-weight: bold;
+
+        }
+        #row3 > button:nth-child(2){
+
+            color: yellow;
+            padding:8px 25px 8px 10px;
+            text-align: center;
+           
+          
+        }
+        #row3 button:hover {
+        color:#ffd310;
+      } 
+      #row2 p:hover {
+         
+        color: #ffd310;
+      }
+   
+   
+       .india{
+        padding-top: 30px;
+        width:30%;
+        height: 100%;
+        text-align: center;
+        /* border:1px solid black; */
+    }
+    img{
+        width:60%;
+    }
+    a{
+        color:black;
+    }
+#row4{
+        width:100%;
+        height: 150px;
+        padding-top: -10px ;
+        /* border:1px solid black; */
+        background-color: #0f4a8a;
+        display:flex;
+        margin:auto;
+    }
+  
+    .pds{
+        width:32%;
+        border:1px solid gray;
+        height: 100%;
+        /* margin: auto; */
+          
+    } 
+    .pds p{
+        color:rgb(233, 226, 226);
+        margin:auto;
+        padding: auto;
+        padding-top: 40px;
+        text-align: center;
+        font-size:20px ;
+        
+    }
+    .bat p{
+        color:rgb(233, 226, 226);
+        text-align: center;
+    }
+    .ball > button{
+        text-align: center;
+        margin-left: 70px;
+        height: 30px;
+        padding: 10px 5px 10px 5px;
+        margin-top: 25px;
+        border:0px;
+        margin-right: 40px;
+        border-radius:5px;
+        background-color: red;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+   .ball{
+       display:flex;
+       margin:auto;
+      width:40%;
+       /* justify-content: space-between; */
+       border:1px solid gray;
+       height: 100%;
+   }
+   
+   .ball>p{
+       color: rgba(236, 226, 92, 0.738);
+       font-size: 25px;
+       text-align: center;
+       
+   }
+   .bat{
+   
+       margin:auto;
+      width:50%;
+       justify-content: space-between;
+   }
+   .bat p
+   {
+       text-align: center;
+color: #ffd310;
+font-size: bold;
+   }
+   #game > img{
+       margin-top:20px;
+       padding-left:250px;
+   }
+   #row5{
+       border:1px solid grey;
+       width:45%;
+       margin-top: 20px;
+       margin-left:30px;
+
+   }
+   #row5 > img{
+       width:80%;
+       height: 40%;
+       margin:auto;
+       padding:30px;
+   }
+   #row5 > h1{
+       font-family: Arial, Helvetica, sans-serif;
+       text-align: justify;
+       padding-top: 0px;
+   }
+   .col{
+       display:flex;
+       /* text-align: center; */
+       width:100%;
+       height: 40%;
+       
+       gap:20px;
+   }
+.rrr{
+    /* text-align: center; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.rrr > img{
+    width:100%;
+    height: 60%;
+}
+#star{
+    display:flex;
+}
+#row6{
+    width:20%;
+    border:1px solid gray;
+   
+    margin:auto;
+    height: 850px;
+    margin-left: 30px;
+    margin-top:20px;
+    overflow:scroll;
+}
+#row6 > p{
+    padding-left:10px ;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: sans-serif;
+
+}
+#row6 >h1{
+    text-align: center;
+}
+#row6 > p:hover{
+    color: blue;
+    cursor: pointer;
+}
+#row7{
+
+    margin-left:-100px;
+    margin-top:20px;
+    width:30%;
+    height: 800px;
+    /* border:01px solid grey; */
+    
+    
+}
+.clo3{
+   
+    width:90%;
+    height: 50%;
+    border:1px solid grey;
+    margin:auto;
+    padding: 20px 20px 20px 20px;
+
+}
+.clo3>img{
+    width:95%;
+    height: 80%;
+    /* border:1px solid black; */
+    /* padding: 10px 10px 30px 10px; */
+    padding: 20px 20px 20px 20px;
+
+
+}
+.clo4{
+margin-top: 50px;
+    width:100%;
+    height: 50%;
+    border:1px solid grey;
+    /* margin:auto; */
+
+
+}
+.clo3 > p{
+    text-align: center;
+    color:grey;
+    font-style: oblique;
+}
+#row5 > h1:hover{
+    color: blue;
+    cursor: pointer;
+}
+.clo4 >img{
+    width:90%;
+    height: 90%;
+    padding: 20px 20px 20px 20px;
+    margin:auto;
+}
+  h1{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 30px;
+      padding-top: 60px;
+      padding-left: 30px;
+      justify-content: space-between;
+      display:flex;
+  }
+  #row8{
+      width:65%;
+      height: 350px;
+      display:flex;
+     overflow-x: scroll;
+      border:1px solid gray;
+      border-radius:5px;
+      /* margin:auto; */
+      padding: auto;
+      text-align: center;
+      gap:25px;
+      margin-left: 80px;
+      margin
+      gap:30px;
+  }
+  
+  
+  .clo5{
+      margin: auto;
+      border-radius: 8px;
+      border: 1px solid grey;
+      height:90%;
+      width:auto;
+      margin-left: 10px;
+      
+
+  }
+  .clo5 >img{
+     width:auto;
+      height: 70%;
+     border-top: 10px;
+  }
+  .clo5 > p{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: bold;
+
+justify-content:left;
+
+ } 
+ #star1{
+     display:flex;
+     width:100%;
+     height: 400px;
+     gap:0px;
+     
+    
+ }
+ #row9{
+    width:26%;
+      height: 400px;
+      display:flex;
+     overflow-x: scroll;
+      border:1px solid gray;
+      border-radius:5px;
+      /* margin:auto; */
+      /* padding: auto; */
+      text-align: center;
+      gap:25px;
+      margin-left: 80px;
+      margin
+      /* gap:30px; */
+      
+ }
+ 
+  .clo6{
+    margin: auto;
+      border-radius: 8px;
+      border: 1px solid grey;
+      height:90%;
+      width:auto;
+      margin-left: 10px;
+     
+ }
+ .form{
+     display:flex;
+     justify-content: space-between;
+     padding-left: 60px;
+     padding-right: 40px;
+     /* font-family:  sans-serif; */
+     
+ }
+ .clo6 > img{
+    width:auto;
+      height: 70%;
+     border-top: 10px;
+ }
+ .clo6 > h3{
+
+     font-family:  sans-serif;
+ }
+ .clo6 > h3:hover{
+     color: #0f4a8a;
+     
+     /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+ }
+ #row10{
+     width:90%;
+     height: 500px;
+     display:flex;
+     margin:auto;
+     margin-top: 50px;
+     gap:30px;
+
+ }
+.clo7{
+    width:30%;
+
+    height: 100%;
+}
+.clo7 >img{
+width:100%;
+height: 50%;
+align-items: center;
+
+}
+.clo7 > h3{
+align-items: center;
+padding-right: 20px;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+}
+.clo7 > p{
+color: gray;
+}
+ul{
+    font-size:20px ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.clo7 > h3:hover{
+color: #0f4a8a;
+
+/* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+}
+.clo7 > ul:hover{
+color: #0f4a8a;
+
+/* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+}
+#star3{
+    display:flex;
+    justify-content:space-evenly;
+    padding-left: 0px;
+    padding-right: 30px;
+ 
+
+}
+#star3 > h1{
+    margin-top: 0px;
+    margin-bottom: -30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#row11{
+    margin-top: 200px;
+    /* padding-top: 200px; */
+    width:100%;
+    height: 1000px;
+    background-color: black;
+    /* display:flex; */
+    /* margin:auto; */
+
+}
+.clo9{
+    background-color: black;
+    display:flex;
+    color: white;
+    text-align: center;
+     display:flex;
+     width:15%;
+     height: 60%;
+     margin-top: 50px;
+     gap:150px;
+     margin-left:50px;
+    line-height:30px; 
+}
+.clo9 > h3{
+    color: white;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.clo9 > h3:hover{
+    color:green;
+}
+.clo9> p:hover{
+    color:green;
+}
+.clo9>p{
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+#row11 >img{
+text-align: center;
+margin: auto;
+}
+.clo8{
+    width:100%;
+    height: 20%;
+    display:flex;
+    justify-content: flex-end;
+}
+.clo10 > img{
+    margin-top: 200px;
+    width:70%;
+    height: 100px;
+    margin:auto;
+    padding-left: 200px;
+
+}
+#row11 > li{
+    color: white;
+    font-size: 30px;
+    background-color: aliceblue;
+}
+#icon{
+    color:rgba(255, 255, 255, 0.936);
+    justify-content: space-evenly;
+    text-align: end;
+    /* justify-items:right; */
+    font-weight: bold;
+    font-size: 90px;;
+    padding-left: 200px;
+    gap:30px;
+    display:flex;
+    
+}
+.material-symbols-outlined{
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 10px;
+   
+}
+.material-symbols-outlined:hover{
+    color: #ffd310;
+    
+}
+.clo8 {
+    background-color:black;
+    color:rgba(255, 255, 255, 0.936);
+    /* justify-content: space-evenly; */
+    /* text-align: end; */
+    /* justify-items:right; */
+    font-weight: bold;
+    font-size: 90px;;
+    padding-left: 200px;
+    gap:30px;
+    display:flex;
+    width:70%;
+
+} 
+/* .clo8 > h1{
+    padding-left: -1px;
+    color: aliceblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */
+.material-symbols-outlined:hover{
+    color: #ffd310;
+    
+} 
+#home{  
+    padding-bottom:20px;
+    text-align: right;
+
+   
+    
+    
+
+    /* padding:20px; */
+}</style>
+</head>
+<body>
+    <div id="navbar">
+    
+        <div><a href="index.html">main</a></div>
+        <div><a href="login.html">Login</a></div>
+        <div><a href="navel.html">signup</a></div>
+    <div id="row1">
+        <p>IndiaToday</p>
+
+        <p>Malayalam</p>
+        <p>Business Today</p>
+        <p>DailyO</p>
+        <p>Aaj Tak</p>
+        <p>Lallantop</p>
+        <p> GNTTV</p>
+        <p> iChowk</p>
+        <p>  Reader’s Digest</p>
+ 
+        
+ 
+    </div>
+    <div id="row2">
+        <p>NEWS</p>
+        <p>LIVE</P>
+          <div class=india>
+              <img src="https://akm-img-a-in.tosshub.com/sites/all/themes/itg/logo.png?v=1.52" alt=""/>
+          </div>
+           <p> APP</p>
+              <p> MAGAZIN</p>
+    </div>
+    <!-- <a  id="home" href="index.html"><button>HOME</button></a> -->
+    <div id ="row3">
+ <a  id="home" href="index.html"><button id="home" >HOME</button></a>
+ <button>MY FEED</button>
+ <button>INDIA</button>
+ <button>WORLD</button>
+ <button>BUSINESS</button>
+ <button>TECH</button>
+ <button>MOVIE</button>
+ <button>IPL</button>
+ <button>SCIENCE</button>
+ <button>HAPPINESS QUEST</button>
+<div id ="icon">
+    <span class="material-symbols-outlined">
+        menu
+         </span>
+         
+             <span class="material-symbols-outlined">
+                currency_bitcoin
+                </span>
+                <span class="material-symbols-outlined">
+                    tv
+                    </span>
+                    <span class="material-symbols-outlined">
+                        share
+                        </span>
+                        <span class="material-symbols-outlined">
+                            search
+                            </span>
+                           <span class="material-symbols-outlined">
+                    person 
+                           </span>
+                        
+                       
+                            
+             
+</div>
+<a href="navbar.html"><span class="material-symbols-outlined">
+    person 
+           </span></a>
+    </div>
+    <div id="row4">
+        <div class="ball">
+            <button>Live</button>
+            <p>Play in process</p>
+        </div>
+        <div class ="bat">
+        
+            <p>STRATEGIC TIME-OUT</p>
+            <p>DC____V/s____ SRH</p>
+            <p>207/3(20.0 )  || 153/5(16.3)</p>    
+        
+    </div>
+        <div class="pds">
+            <p>Date: 09/05/2022</p>
+        </div>
+    </div>
+     
+    <div id="game">
+    <img src ="https://tpc.googlesyndication.com/simgad/4318215117181869670" alt =""/>
+    </div>
+    <div id="star">
+    <div id="row5">
+       <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202205/cc_1200x768.jpeg?size=483:271" atl=""/>
+       
+        <h1>Nobody he  lped, cops arrived 30 min later: Wife of Dalit man killed by her Muslim family</h1>
+        <div class="col">
+            <div class="rrr"> 
+                <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202205/Bagga_1200x768.jpeg?size=237:133" alt=""/>
+                <p>10    -15 Punjab cops' arrest BJP's Tajinder Bagga from his Delhi home for alleged threat to Kejriwal</p>
+            </p>
+            </div>
+            <div class="rrr">
+                <img src ="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202205/amber_heard.png?size=237:133"alt=""/>
+                 <p
+                >zAmber Heard says Johnny Depp sexually assaulted her with bottle, threatened to carve her face</p
+                    >
+            </div>
+        </div>
+    </div>
+    <div id="row6">
+        <h1>Top News</h1>
+        <p>Hyderabad honour killing: Wife of Dalit man narrates sequence of events on day of attack</p>
+        <p>Asian Games postponed until 2023 due to Covid-19 crisis</p>
+        <p>Not a fundamental right: HC rejects plea to install loudspeakers in mosques</p>
+        <p>Animal virus detected in patient who died after pig heart transplant</p>
+        <p>Elon Musk to replace Parag Agrawal as interim Twitter CEO after $44 billion deal closes, says report</p>
+        <p>
+            Berlin kid's father slams Kunal Kamra; comedian defends clip | Top points cheatsheet
+        </p> 
+        <p>Chennai man swallows jewels worth Rs 1.45 lakh along with biryani at friend’s Eid party; items recovered
+
+        </p>
+        <p>Fans on Twitter help Pat Cummins find 'delicious' Mumbai pav bhaji for dinner</p>
+        <p>Am ber Heard says Johnny Depp sexually assaulted her with bottle, threatened to carve her face</p>
+        <p>Amber Heard says Johnny Depp sexually assaulted her with bottle, threatened to carve her face</p>
+        <p>Don’t patronize us: India to Netherlands' ambassador on tweet over Ukraine</p>
+        <p>Tom Cruise makes impossible possible with chopper entry for Top Gun Maverick premiere</p>
+        <p>Punjab cops grabbed Tajinder Bagga’s arms, marched him out without turban, video shows</p>
+        <p>Why Punjab cops arrested BJP's Tajinder Bagga | Read details here</p>
+       <p>My brother tried to hang me twice, says wife of Dalit man killed by her Muslim family for honour</p>
+    </div>
+    <div id="row7">
+        <div class="clo3">
+       <p>Addvertisment</p>
+       <img src ="https://secure-ds.serving-sys.com/resources/PROD/html5/144375/20220428/1076523505/70491032404402159/Sachin_Nephew_22_30_300x250.jpg?versionId=4GqYjYnu1lGi3si9E0rvgzHF2AHsMYTn" alt=""/>
+        </div>
+<div class="clo4">
+<img src="https://tpc.googlesyndication.com/simgad/1542491847300245265" atl=""/>
+</div>
+</div>
+</div>
+<div class= "form">
+<h1>VISUAL STORIES</h1>
+<h1>TODAY'S SPECIAL</h1>
+</div>
+<div id="star1">
+<div id="row8">
+    <div class="clo5">
+        <img src ="https://akm-img-a-in.tosshub.com/sites/visualstory/stories/2022_05/story_6963/assets/14.jpeg?time=1651843963&size=125:168" alt=""/>
+        <p>IPL 2022: Happy Breakup Stories</p>
+    </div>
+    <div class="clo5">
+        <img src ="https://akm-img-a-in.tosshub.com/sites/visualstory/stories/2022_05/story_6962/assets/20.jpeg?time=1651840403&size=125:168" alt=""/>
+        <p
+        >Malaika Arora:Shimmerfor Summer</p
+            >
+    </div>
+    <div class="clo5">
+        <img src ="https://akm-img-a-in.tosshub.com/sites/visualstory/stories/2022_05/story_6961/assets/18.jpeg?time=1651837475&size=125:168" alt=""/>
+        <p
+        >Beauty At its Best! Janhvi Kapoor </p
+            >
+    </div>
+    <div class="clo5">
+        <img src ="https://akm-img-a-in.tosshub.com/sites/visualstory/stories/2022_05/story_6957/assets/13.jpeg?time=1651832676&size=125:168" alt=""/>
+        <p
+        >IPL 2022:Buttle leaders Orange Cap race</p
+            >
+    </div>
+    <div class="clo5">
+        <img src ="https://akm-img-a-in.tosshub.com/sites/visualstory/stories/2022_05/story_6956/assets/12.jpeg?time=1651827643&size=125:168" alt=""/>
+        <p
+        >IPL 2022:KulCha lead Purple Cap race</p
+            >
+    </div> 
+
+    <div class="clo5">
+        <img src ="https://akm-img-a-in.tosshub.com/sites/visualstory/stories/2022_05/story_6951/assets/17.jpeg?time=1651825969&size=125:168" alt=""/>
+        <p>Kappor KHandan House Parties</p>
+            
+    </div>
+    <div class="clo5">
+        <img src ="https://akm-img-a-in.tosshub.com/sites/visualstory/stories/2022_05/story_6954/assets/22.jpeg?time=1651825483&size=125:168" alt=""/>
+        <p
+        >There Celeb's Car Prices Will Shocks You</p
+            >
+    </div>
+    <div class="clo5">
+        <img src ="https://akm-img-a-in.tosshub.com/sites/visualstory/stories/2022_05/story_6943/assets/12.jpeg?time=1651761890&size=125:168" alt=""/>
+        <p
+        >The most miserly bowlers in IPL</p
+            >
+    </div>
+
+    <div class="clo5">
+        <img src ="https://akm-img-a-in.tosshub.com/sites/visualstory/stories/2022_05/story_6942/assets/18.jpeg?time=1651759721&size=125:168" alt=""/>
+        <p
+        >Huma Qureshi's dounle xl style</p
+            >
+    </div>
+    <div class="clo5"> 
+        <img src ="https://akm-img-a-in.tosshub.com/sites/visualstory/stories/2022_05/story_6941/assets/19.jpeg?time=1651758999&size=125:168" alt=""/>
+        <p>Sara Ali Khan's Blingtastis Fashion</p>
+            
+    </div>
+</div>
+<!-- <h1>TODAY'S SPECIAL</h1> -->
+    <div id="row9">
+    
+       
+        <div class="clo6">
+            <img src= "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202205/Moons.jpg?size=647:363" atl=""/>
+            <h3>Moon is pulling Earth's water, scientist finds a unique lunar source</h3>
+
+        </div>
+        <div class="clo6">
+            <img src= "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202205/1200_(1)_1.jpg?size=647:363" atl=""/>
+            <h3>Kunal Kamra mocks kid who sang for PM, boy’s father threatens legal action</h3>
+        </div>
+        <div class="clo6">
+            <img src= "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202205/Delhi_heat_1.jpg?size=647:363" atl=""/>
+            <h3>Mumbai Indians snatch victory from the jaws of defeat, Gujarat Titans lose by 5 runs</h3>
+        </div>
+        <div class="clo6">
+            <img src= "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202205/abortion_US_supreme_court_1200x768.jpeg?size=647:363" atl=""/>
+            <h3>An abortion bomb went off in the US this week. Here's what you missed</h3>
+        </div>
+        
+    </div>
+
+</div>
+    <div id="star3">
+        <h1>MOVIES</h1>
+        <h1>TECHNOLOGY</h1>
+        <h1>IPL 2022</h1>
+    </div>
+<div id="row10">
+
+    <div class="clo7">
+        <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202205/pjimage_11.jpg?size=370:208" alt=""/>
+        <h3>Sonam Kapoor makes dessert to satisfy her pregnancy cravings. Watch video</h3>
+        <ul>
+            <li>Masaba Gupta feels modern love is 'simply complicated' | Exclusive</li>
+            <p>___________________________________________________</p>
+            <li>Bollywood's political correctness killed it, one hero at a time</li>
+            
+        </ul>
+    </div>
+    <div  class="clo7">
+        <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202205/FSEqtE4XIAUlfP1.jpeg?size=370:208" alt=""/>
+        <h3>iQOO Neo 6 SE launched with Snapdragon 870 SoC, 80W fast charging: Price, specifications</h3>
+        <ul>
+            <li>Mother’s Day 2022: 5 best tech gift ideas under Rs 10,000</li>
+            <p>___________________________________________________</p>
+            <li>Vivo announces summer special offer for V23e in India with Rs 5,000 cashback on select bank cards</li>
+           
+
+        </ul>
+    </div>
+    <div class="clo7" >
+        
+        <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202205/Rishabh_Pant_1200x768.jpeg?size=370:208" alt=""/>
+        <h3>Adding kabaddi to my resume: Rishabh Pant has a blast with Ricky Ponting's son Fletcher</h3>
+        <ul>
+            <li>‘India should use him like Australia used Mitchell Johnson’ - Pietersen calls for Malik’s Test debut</li>
+            <p>___________________________________________________</p>
+            <li>GT vs MI IPL 2022 Live: Gill, Saha fall after hundred opening stand</li>
+        
+        </ul>
+    </div>
+</div>
+<div id="row11">
+    <div class="clo8">
+       
+        <span class="material-symbols-outlined">
+            call
+            </span><span class="material-symbols-outlined">
+                star
+                </span>
+                <span class="material-symbols-outlined">
+                    sentiment_satisfied
+                    </span>
+                    <span class="material-symbols-outlined">
+                        download_done
+                        </span>
+    </div>
+    <div class="clo10">
+    <img src="https://s0.2mdn.net/simgad/10544034866666616712" alt=""/></div>
+    <div class="clo9">
+        <div>
+            <h3>PUBLICATION</h3>
+            <p>Business today</p>
+            <p>Cosmopolitan</p>
+            <p>IndiaToday -HIndi</p>
+            <p>Indi
+                a Todayp
+            
+            </p>
+            <p>Mail Today</p>
+            <p>Reader's Digest</p>
+            <p>Time</p>
+        </div>
+        <div>
+            <h3>EDUCATION</h3>
+            <p>Business today</p>
+            <p>Cosmopolitan</p>
+            <p>IndiaToday -HIndi</p>
+            <p>India Todayp
+            
+            </p>
+            <p>Mail Today</p>
+            <p>Reader's Digest</p>
+            <p>Time</p>
+        </div>
+        <div>
+            <h3>TELEVISION</h3>
+            <p>Business today</p>
+            <p>Cosmopolitan</p>
+            <p>IndiaToday -HIndi</p>
+            <p>India Todayp
+            
+            </p>
+            <p>Mail Today</p>
+            <p>Reader's Digest</p>
+            <p>Time</p>
+
+        </div>
+        <div>
+            <h3>EVENTS</h3>
+            <p>Business today</p>
+            <p>Cosmopolitan</p>
+            <p>IndiaToday -HIndi</p>
+            <p>India Todayp
+            
+            </p>
+            <p>PRINTION</p>
+            <p>Mail Today</p>
+            <p>Reader's Digest</p>
+            <p>Time</p>
+        </div>
+        <div>
+            <h3>PUBLICATION</h3>
+            <p>Business today</p>
+            <p>Cosmopolitan</p>
+            <p>IndiaToday -HIndi</p>
+            <p>India Todayp
+            
+            </p>
+            <p>Mail Today</p>
+            <p>Reader's Digest</p>
+            <p>Time</p>
+        </div>
+        <div>
+            <h3>DISTURBANCE</h3>
+            <p>Business today</p>
+            <p>Cosmopolitan</p>
+            <p>IndiaToday -HIndi</p>
+            <p>India Todayp
+            
+            </p>
+            <h3>SYNDICATION</h3>
+            <p>Mail Today</p>
+            <p>Reader's Digest</p>
+            <p>Time</p>
+            <h3>USEFUL LINKS</h3>
+            <p>parteners</p>
+            <p>Press Release</p>
+            <p>Sitemap</p>
+            <p>NEWS</p>
+            <P>Newsletter</P>
+            <p>Privacy Policy</p>
+        </div>
+    </div>
+</div>
+</div>
+</bodidy>
+</html>
+ </script>
